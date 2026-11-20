@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>StudyPlan</title>
+<style>
+:root{--bg:#f7f9fc;--card:#fff;--tx:#1b2430;--mu:#5a6676;--ac:#2f5d8a;--ac2:#e8a33d;--bd:#dde3ec;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151c;--card:#1a222d;--tx:#e8edf3;--mu:#9aa7b8;--ac:#7fb0e0;--bd:#2c3745;color-scheme:dark}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--tx);line-height:1.6}
+nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--bd);display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:10px 16px;z-index:5}
+nav b{margin-right:auto;color:var(--ac);font-size:1.15rem}nav a{color:var(--tx);text-decoration:none;padding:6px 10px;border-radius:6px;font-family:system-ui,sans-serif;font-size:.9rem}nav a:hover{background:var(--bg)}
+section{max-width:960px;margin:0 auto;padding:48px 20px}
+.hero{text-align:center;padding:80px 20px}.hero h1{font-size:clamp(2.2rem,7vw,3.6rem);margin:0;color:var(--ac)}.hero p{max-width:600px;margin:16px auto;color:var(--mu);font-size:1.15rem}
+.btn{display:inline-block;background:var(--ac);color:var(--bg);padding:12px 24px;border-radius:8px;text-decoration:none;font-family:system-ui,sans-serif;font-weight:600}
+h2{color:var(--ac);border-bottom:3px solid var(--ac2);display:inline-block;padding-bottom:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:20px}.card h3{margin:0 0 6px}.card p{margin:0;color:var(--mu)}
+.tags span{display:inline-block;background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:6px 14px;margin:4px;font-family:system-ui,sans-serif;font-size:.9rem}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
+.phone{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:16px;font-family:system-ui,sans-serif;font-size:.85rem}
+.row{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid var(--bd)}.row i{font-style:normal;color:var(--ac2)}
+.bar{height:8px;background:var(--bd);border-radius:4px;margin:8px 0}.bar u{display:block;height:100%;background:var(--ac);border-radius:4px}
+footer{text-align:center;color:var(--mu);padding:30px 20px;border-top:1px solid var(--bd);font-family:system-ui,sans-serif;font-size:.9rem}
+</style></head><body>
+<nav><b>StudyPlan</b><a href="#home">Головна</a><a href="#about">Про проєкт</a><a href="#features">Можливості</a><a href="#tech">Технології</a><a href="#demo">Демо</a><a href="#contacts">Контакти</a></nav>
+<section id="home" class="hero"><h1>StudyPlan</h1><p>Планувальник навчального часу студента: розклад, дедлайни та нагадування в одному місці.</p><a class="btn" href="#demo">Переглянути демо</a></section>
+<section id="about"><h2>Про проєкт</h2><p>Студенти змушені відстежувати розклад занять, терміни здачі лабораторних і практичних робіт у різних месенджерах і таблицях. Через це дедлайни легко пропустити.</p><p><b>Мета:</b> створити простий застосунок, який збирає всі навчальні завдання в єдиний список і вчасно нагадує про них.</p><p><b>Аудиторія:</b> студенти закладів вищої та фахової передвищої освіти.</p></section>
+<section id="features"><h2>Можливості</h2><div class="grid">
+<div class="card"><h3>Розклад</h3><p>Заняття на тиждень із аудиторіями та викладачами.</p></div>
+<div class="card"><h3>Дедлайни</h3><p>Список робіт з термінами та пріоритетами.</p></div>
+<div class="card"><h3>Нагадування</h3><p>Сповіщення за день і за годину до терміну.</p></div>
+<div class="card"><h3>Статистика</h3><p>Відсоток виконаних завдань за тиждень і семестр.</p></div></div></section>
+<section id="tech"><h2>Технології</h2><div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Room (SQLite)</span><span>Firebase Cloud Messaging</span><span>Git і GitHub</span><span>Figma</span></div></section>
+<section id="demo"><h2>Демо</h2><p>Приклад інтерфейсу застосунку.</p><div class="shots">
+<div class="phone"><b>Розклад</b><div class="row"><span>08:30 Бази даних</span><i>ауд. 214</i></div><div class="row"><span>10:15 Технології ПЗ</span><i>ауд. 305</i></div><div class="row"><span>12:00 Мережі</span><i>ауд. 118</i></div></div>
+<div class="phone"><b>Дедлайни</b><div class="row"><span>Практична 8</span><i>завтра</i></div><div class="row"><span>Лабораторна 5</span><i>3 дні</i></div><div class="row"><span>Реферат</span><i>7 днів</i></div></div>
+<div class="phone"><b>Прогрес тижня</b><div class="bar"><u style="width:72%"></u></div><span>72% завдань виконано</span><div class="bar"><u style="width:45%"></u></div><span>45% семестру</span></div></div></section>
+<section id="contacts"><h2>Контакти</h2><p>Автор: Мечкало Марія Сергіївна, група 22-ІП.</p><p>Пошта: <a href="mailto:example@email.com" style="color:var(--ac)">example@email.com</a></p></section>
+<footer>StudyPlan, 2026. Навчальний проєкт.</footer>
+</body></html>
